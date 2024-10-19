@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+# Vite + React + shadcn + TypeScript Starter Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a starter template for creating a React app using Vite, TypeScript, and shadcn components, with strict ESLint rules and Git hooks using Husky and Conventional Commits. 
 
-Currently, two official plugins are available:
+**Don't forget to change the default colors in `index.css`—these ones are placeholders and might not look great. You can use the [shadcn theme generator](https://ui.shadcn.dev) to make the color customization process easier.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Vite for fast builds and HMR
+- React 18 + TypeScript
+- shadcn components for UI
+- Strict ESLint with TypeScript-aware rules
+- Husky Git hooks for linting and enforcing Conventional Commits
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 1. Clone the Repository
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Instead of setting up from scratch, you can clone this starter repository:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+```bash
+git clone <your-repo-url>
+cd my-vite-app
